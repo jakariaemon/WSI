@@ -24,7 +24,7 @@ The `wsi` library provides a simple interface to use the WSI model for embedding
 from wsi import load_model, process_single_audio
 
 # Load the model and feature extractor
-model, feature_extractor = load_model("path/to/wsi_model.pth")
+model, feature_extractor = load_model("path/to/wsi.pth")
 
 # Generate embeddings for an audio file
 embedding = process_single_audio(model, feature_extractor, "path/to/audio.wav")
@@ -37,7 +37,7 @@ print("Speaker Embedding:", embedding)
 from wsi import load_model, process_audio_pair
 
 # Load the model and feature extractor
-model, feature_extractor = load_model("path/to/wsi_model.pth")
+model, feature_extractor = load_model("path/to/wsi.pth")
 
 # Compute similarity between two audio files
 similarity = process_audio_pair(
