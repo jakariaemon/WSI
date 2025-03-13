@@ -3,48 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WHISPER SPEAKER IDENTIFICATION: LEVERAGING PRE-TRAINED MULTILINGUAL TRANSFORMERS FOR ROBUST SPEAKER EMBEDDINGS</title>
+  <title>LEVERAGING PRE-TRAINED MULTILINGUAL TRANSFORMERS FOR ROBUST SPEAKER EMBEDDINGS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
+    :root {
+      --bg-color: #f9f9f9;
+      --text-color: #333;
+      --primary-color: #007bff;
+      --header-bg: #fff;
+    }
+    body.dark {
+      --bg-color: #333;
+      --text-color: #f9f9f9;
+      --header-bg: #444;
+    }
     body {
-      font-family: Arial, sans-serif;
-      margin: 2em;
-      background-color: #f9f9f9;
-      line-height: 1.6;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
     }
     header {
-      text-align: center;
-      margin-bottom: 2em;
-    }
-    .paper-title {
-      font-size: 2em;
-      font-weight: bold;
-    }
-    .abstract {
-      max-width: 800px;
-      margin: 0 auto;
-      background-color: #fff;
+      background-color: var(--header-bg);
       padding: 1.5em;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 4px;
-    }
-    .abstract h2 {
       text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8em;
+      font-weight: 700;
+    }
+    .container {
+      max-width: 800px;
+      margin: 2em auto;
+      padding: 1.5em;
+      background-color: var(--header-bg);
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .toggle-button {
+      position: fixed;
+      top: 1em;
+      right: 1em;
+      padding: 0.5em 1em;
+      cursor: pointer;
+      border: none;
+      background: var(--primary-color);
+      color: #fff;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .toggle-button:hover {
+      background: darkblue;
+    }
+    .download-btn {
+      display: inline-block;
+      padding: 0.5em 1em;
+      margin-top: 1em;
+      text-decoration: none;
+      color: #fff;
+      background: var(--primary-color);
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .download-btn:hover {
+      background: darkblue;
     }
   </style>
 </head>
 <body>
+  <button class="toggle-button" onclick="document.body.classList.toggle('dark')">Toggle Dark Mode</button>
   <header>
-    <div class="paper-title">
-      WHISPER SPEAKER IDENTIFICATION: LEVERAGING PRE-TRAINED MULTILINGUAL TRANSFORMERS FOR ROBUST SPEAKER EMBEDDINGS
-    </div>
+    <h1>LEVERAGING PRE-TRAINED MULTILINGUAL TRANSFORMERS FOR ROBUST SPEAKER EMBEDDINGS</h1>
   </header>
-  <main>
-    <section class="abstract">
-      <h2>Abstract</h2>
-      <p>
-        Speaker identification in multilingual settings presents unique challenges, particularly when conventional models are predominantly trained on English data. In this paper, we propose WSI (Whisper Speaker Identification), a framework that repurposes the encoder of the Whisper automatic speech recognition model pre-trained on extensive multilingual data to generate robust speaker embeddings via a joint loss optimization strategy that leverages online hard triplet mining and self-supervised Normalized Temperature-scaled Cross Entropy (nt-xent) loss. By capitalizing on Whisper’s language-agnostic acoustic representations, our approach effectively distinguishes speakers across diverse languages and recording conditions. Extensive evaluations on multiple corpora, including VoxTube (multilingual), JVS (Japanese), CallHome (German, Spanish, Chinese, and Japanese), and Voxconverse (English), demonstrate that WSI consistently outperforms state-of-the-art baselines, namely Pyannote Embedding, ECAPA-TDNN, and X-vector, in terms of lower equal error rates and higher AUC scores. These results validate our hypothesis that a multilingual pre-trained ASR encoder, combined with joint loss optimization, substantially improves speaker identification performance in non-English languages.
-      </p>
-    </section>
-  </main>
+  <div class="container">
+    <h2>Abstract</h2>
+    <p>
+      Speaker identification in multilingual settings presents unique challenges, particularly when conventional models are predominantly trained on English data. In this paper, we propose WSI (Whisper Speaker Identification), a framework that repurposes the encoder of the Whisper automatic speech recognition model pre-trained on extensive multilingual data to generate robust speaker embeddings via a joint loss optimization strategy that leverages online hard triplet mining and self-supervised Normalized Temperature-scaled Cross Entropy (nt-xent) loss. By capitalizing on Whisper’s language-agnostic acoustic representations, our approach effectively distinguishes speakers across diverse languages and recording conditions. Extensive evaluations on multiple corpora, including VoxTube (multilingual), JVS (Japanese), CallHome (German, Spanish, Chinese, and Japanese), and Voxconverse (English), demonstrate that WSI consistently outperforms state-of-the-art baselines, namely Pyannote Embedding, ECAPA-TDNN, and X-vector, in terms of lower equal error rates and higher AUC scores. These results validate our hypothesis that a multilingual pre-trained ASR encoder, combined with joint loss optimization, substantially improves speaker identification performance in non-English languages.
+    </p>
+    <a class="download-btn" href="paper.pdf" download>Download PDF</a>
+  </div>
+  <script>
+  </script>
 </body>
 </html>
