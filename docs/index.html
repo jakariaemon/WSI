@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WHISPER SPEAKER IDENTIFICATION: LEVERAGING PRE-TRAINED MULTILINGUAL TRANSFORMERS FOR ROBUST SPEAKER EMBEDDINGS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2em;
+      background-color: #f9f9f9;
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+    .paper-title {
+      font-size: 2em;
+      font-weight: bold;
+    }
+    .abstract {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 1.5em;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 4px;
+    }
+    .abstract h2 {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="paper-title">
+      WHISPER SPEAKER IDENTIFICATION: LEVERAGING PRE-TRAINED MULTILINGUAL TRANSFORMERS FOR ROBUST SPEAKER EMBEDDINGS
+    </div>
+  </header>
+  <main>
+    <section class="abstract">
+      <h2>Abstract</h2>
+      <p>
+        Speaker identification in multilingual settings presents unique challenges, particularly when conventional models are predominantly trained on English data. In this paper, we propose WSI (Whisper Speaker Identification), a framework that repurposes the encoder of the Whisper automatic speech recognition model pre-trained on extensive multilingual data to generate robust speaker embeddings via a joint loss optimization strategy that leverages online hard triplet mining and self-supervised Normalized Temperature-scaled Cross Entropy (nt-xent) loss. By capitalizing on Whisper’s language-agnostic acoustic representations, our approach effectively distinguishes speakers across diverse languages and recording conditions. Extensive evaluations on multiple corpora, including VoxTube (multilingual), JVS (Japanese), CallHome (German, Spanish, Chinese, and Japanese), and Voxconverse (English), demonstrate that WSI consistently outperforms state-of-the-art baselines, namely Pyannote Embedding, ECAPA-TDNN, and X-vector, in terms of lower equal error rates and higher AUC scores. These results validate our hypothesis that a multilingual pre-trained ASR encoder, combined with joint loss optimization, substantially improves speaker identification performance in non-English languages.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
