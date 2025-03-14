@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LEVERAGING PRE-TRAINED MULTILINGUAL TRANSFORMERS FOR ROBUST SPEAKER EMBEDDINGS</title>
+  <title>Whisper Speaker Identification</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     :root {
@@ -12,22 +12,15 @@
       --primary-color: #007bff;
       --header-bg: #fff;
     }
-    body.dark {
-      --bg-color: #333;
-      --text-color: #f9f9f9;
-      --header-bg: #444;
-    }
     body {
       background-color: var(--bg-color);
       color: var(--text-color);
       font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      transition: background-color 0.3s, color 0.3s;
     }
     header {
-      position: relative; /* Ensure it stays in place */
-      padding: 2em 1.5em 1em; /* Add more top padding */
+      padding: 2em 1.5em 1em;
       text-align: center;
       background-color: var(--header-bg);
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -45,50 +38,79 @@
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
-    .toggle-button {
-      position: absolute;
-      top: 1.5em;  /* Adjusted to move below the title */
-      right: 1.5em;
-      padding: 0.5em 1em;
-      cursor: pointer;
-      border: none;
-      background: var(--primary-color);
-      color: #fff;
-      border-radius: 5px;
-      transition: background 0.3s;
-      z-index: 1000; /* Ensures it appears above other elements */
+    .section {
+      margin-top: 2em;
     }
-    .toggle-button:hover {
-      background: darkblue;
+    .section img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
     }
-    .download-btn {
-      display: inline-block;
-      padding: 0.5em 1em;
+    .author-info {
+      display: flex;
+      align-items: center;
       margin-top: 1em;
-      text-decoration: none;
-      color: #fff;
-      background: var(--primary-color);
-      border-radius: 5px;
-      transition: background 0.3s;
     }
-    .download-btn:hover {
-      background: darkblue;
+    .author-info img {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      margin-right: 1em;
+    }
+    .bibtex {
+      background: #f0f0f0;
+      padding: 1em;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-family: monospace;
+      font-size: 0.9em;
+      line-height: 1.5;
+    }
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <button class="toggle-button" onclick="document.body.classList.toggle('dark')">Toggle Dark Mode</button>
   <header>
-    <h1>LEVERAGING PRE-TRAINED MULTILINGUAL TRANSFORMERS FOR ROBUST SPEAKER EMBEDDINGS</h1>
+    <h1>Whisper Speaker Identification</h1>
+    <p>Leveraging Pre-Trained Multilingual Transformers for Robust Speaker Embeddings</p>
   </header>
   <div class="container">
-    <h2>Abstract</h2>
-    <p>
-      Speaker identification in multilingual settings presents unique challenges, particularly when conventional models are predominantly trained on English data. In this paper, we propose WSI (Whisper Speaker Identification), a framework that repurposes the encoder of the Whisper automatic speech recognition model pre-trained on extensive multilingual data to generate robust speaker embeddings via a joint loss optimization strategy that leverages online hard triplet mining and self-supervised Normalized Temperature-scaled Cross Entropy (nt-xent) loss. By capitalizing on Whisper’s language-agnostic acoustic representations, our approach effectively distinguishes speakers across diverse languages and recording conditions. Extensive evaluations on multiple corpora, including VoxTube (multilingual), JVS (Japanese), CallHome (German, Spanish, Chinese, and Japanese), and Voxconverse (English), demonstrate that WSI consistently outperforms state-of-the-art baselines, namely Pyannote Embedding, ECAPA-TDNN, and X-vector, in terms of lower equal error rates and higher AUC scores. These results validate our hypothesis that a multilingual pre-trained ASR encoder, combined with joint loss optimization, substantially improves speaker identification performance in non-English languages.
-    </p>
-    <a class="download-btn" href="https://arxiv.org/pdf/2503.10446.pdf" target="_blank">Download PDF</a>
+    <section class="section" id="abstract">
+      <h2>Abstract</h2>
+      <p>
+        Speaker identification in multilingual settings presents unique challenges, particularly when conventional models are predominantly trained on English data. In this work, we propose WSI (Whisper Speaker Identification), a framework that repurposes the encoder of the Whisper automatic speech recognition model pre-trained on extensive multilingual data to generate robust speaker embeddings. Our approach leverages joint loss optimization, online hard triplet mining, and self-supervised nt-xent loss, significantly outperforming state-of-the-art baselines across diverse languages.
+      </p>
+    </section>
+    
+    <section class="section" id="architecture">
+      <h2>Architecture Diagram</h2>
+      <img src="images/network.jpg" alt="WIS Architecture" />
+    </section>
+    
+    <section class="section" id="citation">
+      <h2>Citation</h2>
+      <p>If you use this work, please cite it as follows:</p>
+      <div class="bibtex">
+        @article{emon2025whisper,<br>
+        &nbsp;&nbsp;author    = {Jakaria Islam Emon and Md Abu Salek and Kazi Tamanna Alam},<br>
+        &nbsp;&nbsp;title     = {Whisper Speaker Identification: Leveraging Pre-Trained Multilingual Transformers for Robust Speaker Embeddings},<br>
+        &nbsp;&nbsp;journal   = {arXiv preprint},<br>
+        &nbsp;&nbsp;year      = {2025},<br>
+        &nbsp;&nbsp;eprint    = {2503.10446},<br>
+        &nbsp;&nbsp;archivePrefix = {arXiv},<br>
+        &nbsp;&nbsp;primaryClass = {cs.SD},<br>
+        &nbsp;&nbsp;doi       = {10.48550/arXiv.2503.10446}<br>
+        }
+      </div>
+      <p>Download the PDF version on <a href="https://arxiv.org/pdf/2503.10446.pdf" target="_blank">arXiv</a>.</p>
+    </section>
   </div>
-  <script>
-  </script>
 </body>
 </html>
