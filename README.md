@@ -4,7 +4,7 @@
 
 
 ## Usage
-Comming Soon!
+Coming Soon!
 
 ### Cite This Work
 
