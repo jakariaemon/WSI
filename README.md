@@ -2,10 +2,6 @@
 
 **Whisper Speaker Identification (WSI)** is a state-of-the-art speaker identification model designed for multilingual scenarios.The WSI model adapts OpenAI's Whisper encoder and fine-tunes it with a projection head with hybrid loss (Online Triplet + Multi-View Self-Supervised). This approach enhances its ability to generate discriminative, language-agnostic speaker embeddings.WSI demonstrates state-of-the-art performance on multilingual datasets, achieving lower Equal Error Rates (EER) and higher F1 Scores.
 
-
-## Usage
-Coming Soon!
-
 ### Cite This Work
 
 
@@ -28,7 +24,3 @@ arXiv preprint, 2025.
   doi       = {10.48550/arXiv.2503.10446}
 }
 ```
-
-### License
-
-This project is licensed under the CC BY-NC-SA 4.0 License.
